@@ -90,7 +90,7 @@ const cupons = [
 const cardWrap = document.querySelector(".card__wrapp");
 const menuItems = document.querySelectorAll(".sidebar__list-item");
 const menuImg = document.querySelectorAll(".sidebar__list-item img");
-const headerName = document.querySelector('.header__wrapp-heading') ;
+const headerName = document.querySelector(".header__wrapp-heading");
 
 const displayCupons = function (cupon) {
   cupon.forEach(({ tilte, description, num, label, image }) => {
@@ -121,11 +121,7 @@ const activeMenuItem = function (e) {
   e.currentTarget.classList.add("active");
   const text = e.currentTarget.textContent;
 
-  e.currentTarget.firstElementChild.style.background = 'url(../../assets/icons/sidebar/default/catalog.png)'
-  e.currentTarget.firstElementChild.style.background = 'url(../../assets/icons/sidebar/active/catalog.png)'
-  headerName.textContent=text;
-
-
+  headerName.textContent = text;
 };
 
 menuItems.forEach((item) => {

@@ -7,6 +7,17 @@
   overflow-y: scroll;
 }
 
+.body__wrapp::-webkit-scrollbar {
+  display: none;
+}
+
+.body__wrapp {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
 .header__wrapp {
   position: absolute;
   height: 20.1rem;
@@ -79,7 +90,7 @@
   cursor: pointer;
   align-items: center;
 }
-.sidebar__list-item-img {
+.sidebar__list-item svg {
   width: 24px;
   height: 24px;
   margin-right: 12px;
@@ -93,12 +104,8 @@
 .active a {
   color: #34abe0;
 }
-
-.icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 12px;
-  background: url("../../assets/icons/sidebar/default/catalog.png");
+.active svg path {
+  stroke: #34abe0;
 }
 
 .card__wrapp {

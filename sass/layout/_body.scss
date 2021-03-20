@@ -6,3 +6,11 @@
   top: 201px;
   overflow-y: scroll;
 }
+
+.body__wrapp::-webkit-scrollbar {
+  display: none;
+}
+.body__wrapp{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
