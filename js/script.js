@@ -91,6 +91,7 @@ const cardWrap = document.querySelector(".card__wrapp");
 const menuItems = document.querySelectorAll(".sidebar__list-item");
 const menuImg = document.querySelectorAll(".sidebar__list-item img");
 const headerName = document.querySelector(".header__wrapp-heading");
+const mobileBnt = document.querySelector('.mobile__menu-btn');
 
 const displayCupons = function (cupon) {
   cupon.forEach(({ tilte, description, num, label, image }) => {
@@ -128,4 +129,6 @@ menuItems.forEach((item) => {
   item.addEventListener("click", activeMenuItem);
 });
 
-console.log(menuImg);
+mobileBnt.addEventListener('click',function(){
+  console.log('click');
+})

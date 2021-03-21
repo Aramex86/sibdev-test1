@@ -5,6 +5,11 @@
   left: 240px;
   top: 201px;
   overflow-y: scroll;
+  @include respond(tab-port){
+    width: 66.4rem;
+    height: 843px;
+  
+  }
 }
 
 .body__wrapp::-webkit-scrollbar {

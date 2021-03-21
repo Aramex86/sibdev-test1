@@ -17,6 +17,10 @@
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
+    @include respond(tab-port){
+      width: 29.6rem;
+      height: 144px;
+    }
     &:hover {
       background: url("../../assets/img/hover.png");
       background-size: cover;

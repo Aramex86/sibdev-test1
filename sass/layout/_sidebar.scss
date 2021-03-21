@@ -5,6 +5,11 @@
   top: 0px;
   bottom: -21px;
   background: $sidebar-bg;
+  @include respond(tab-port) {
+    &--mobile {
+      // width: 10.4rem;
+    }
+  }
 }
 
 .sidebar__logo {
@@ -35,11 +40,25 @@
       text-decoration: none;
       font-size: $sidebar-menu;
       color: #000;
+      display: flex;
+      align-items: center;
+      @include respond(tab-port) {
+        font-size: $main-mob-h2;
+        font-weight: 600;
+      }
     }
   }
 }
 
 .active {
+  &::before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 3px;
+    background: $navigation-item-active;
+    left: 0;
+  }
   & a {
     color: $navigation-item-active;
   }
@@ -47,5 +66,26 @@
     & path {
       stroke: $navigation-item-active;
     }
+  }
+}
+
+//Mobile
+.mobile__menu {
+  position: absolute;
+  right: 0;
+  background: url("../../assets/icons/sidebar/menu/Union.png");
+  width: 48px;
+  height: 106px;
+  left:100%;
+  &-btn{
+    position: absolute;
+    width: 26px;
+    height: 20px;
+    right: 20px;
+    top: 43px;
+    background-image: url('../../assets/icons/sidebar/menu/burger\ menu.png');
+    background-color: transparent;
+    border: none;
+    outline: none;
   }
 }

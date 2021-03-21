@@ -1,3 +1,17 @@
+/*
+0-600px: phone;
+600-900px:tablel portrait;
+600-1200px:tablel landscape;
+[1200 - 1800] is where normal style apply
+1800px + :big desktop;
+ORDER: Base + typography > general layout + grid > page layout > components
+$breakpoint argument choises:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+1em = 16px
+*/
 .body__wrapp {
   position: absolute;
   width: 120rem;
@@ -5,6 +19,12 @@
   left: 240px;
   top: 201px;
   overflow-y: scroll;
+}
+@media (max-width: 56.25em) {
+  .body__wrapp {
+    width: 66.4rem;
+    height: 843px;
+  }
 }
 
 .body__wrapp::-webkit-scrollbar {
@@ -26,12 +46,28 @@
   right: 0px;
   top: 0px;
   background: #ffffff;
-  padding: 4rem 0;
+}
+@media (max-width: 56.25em) {
+  .header__wrapp {
+    width: 65.5rem;
+    left: 192px;
+    height: 181px;
+    border-bottom: 1px solid #e5e5e5;
+  }
 }
 .header__wrapp-heading {
   padding-left: 6rem;
   font-size: 2.8rem;
   margin-bottom: 30px;
+}
+@media (max-width: 56.25em) {
+  .header__wrapp-heading {
+    position: absolute;
+    width: 29.6rem;
+    height: 40px;
+    left: 315px;
+    top: 31px;
+  }
 }
 .header__wrapp-input {
   position: absolute;
@@ -40,6 +76,13 @@
   left: 60px;
   border-radius: 50px;
   border: none;
+}
+@media (max-width: 56.25em) {
+  .header__wrapp-input {
+    width: 61.2rem;
+    left: 17px;
+    top: 102px;
+  }
 }
 .header__wrapp-input input {
   border: 1px solid rgba(51, 51, 51, 0.2);
@@ -68,7 +111,6 @@
   bottom: -21px;
   background: #f3f4f9;
 }
-
 .sidebar__logo {
   position: absolute;
   width: 12.1rem;
@@ -99,13 +141,49 @@
   text-decoration: none;
   font-size: 1.6rem;
   color: #000;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 56.25em) {
+  .sidebar__list-item-link {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
 }
 
+.active::before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 3px;
+  background: #34abe0;
+  left: 0;
+}
 .active a {
   color: #34abe0;
 }
 .active svg path {
   stroke: #34abe0;
+}
+
+.mobile__menu {
+  position: absolute;
+  right: 0;
+  background: url("../../assets/icons/sidebar/menu/Union.png");
+  width: 48px;
+  height: 106px;
+  left: 100%;
+}
+.mobile__menu-btn {
+  position: absolute;
+  width: 26px;
+  height: 20px;
+  right: 20px;
+  top: 43px;
+  background-image: url("../../assets/icons/sidebar/menu/burger menu.png");
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 .card__wrapp {
@@ -128,6 +206,12 @@
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
+}
+@media (max-width: 56.25em) {
+  .card__wrapp-card {
+    width: 29.6rem;
+    height: 144px;
+  }
 }
 .card__wrapp-card:hover {
   background: url("../../assets/img/hover.png");
@@ -206,6 +290,29 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  /*@include respond(phone){
+    font-size: 50%;// 1rem = 8px ;8/16 = 50%
+  }*/
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 48em) {
+  html {
+    font-size: 48%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
 }
 
 body {
@@ -219,4 +326,9 @@ body {
   position: relative;
   width: 140rem;
   height: 102.4rem;
+}
+@media (max-width: 56.25em) {
+  .container {
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */
