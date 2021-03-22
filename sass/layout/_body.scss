@@ -5,12 +5,26 @@
   left: 240px;
   top: 201px;
   overflow-y: scroll;
+  @include respond(tab-port){
+    position: absolute;
+    width: 90rem;
+    height: 69.9rem;
+    left: 141px;
+    top: 140px;
+  }
   @include respond(ipad) {
     position: absolute;
     width: 664px;
     height: 918px;
     left: 104px;
     top: 181px;
+  }
+  @include respond(small-phone) {
+    position: absolute;
+    width: 320px;
+    height: 399px;
+    left: 0px;
+    top: 169px;
   }
 }
 
@@ -22,6 +36,6 @@
   scrollbar-width: none; /* Firefox */
 }
 
-.mtop{
-  top:99px;
+.mtop {
+  top: 99px;
 }

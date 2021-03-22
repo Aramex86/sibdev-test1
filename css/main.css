@@ -20,6 +20,15 @@ $breakpoint argument choises:
   top: 201px;
   overflow-y: scroll;
 }
+@media (max-width: 56.25em) {
+  .body__wrapp {
+    position: absolute;
+    width: 90rem;
+    height: 69.9rem;
+    left: 141px;
+    top: 140px;
+  }
+}
 @media (max-width: 48em) {
   .body__wrapp {
     position: absolute;
@@ -27,6 +36,15 @@ $breakpoint argument choises:
     height: 918px;
     left: 104px;
     top: 181px;
+  }
+}
+@media (max-width: 20em) {
+  .body__wrapp {
+    position: absolute;
+    width: 320px;
+    height: 399px;
+    left: 0px;
+    top: 169px;
   }
 }
 
@@ -47,7 +65,7 @@ $breakpoint argument choises:
 
 .header__wrapp {
   position: absolute;
-  height: 20.1rem;
+  height: 201px;
   width: 120rem;
   left: 240px;
   right: 0px;
@@ -55,11 +73,16 @@ $breakpoint argument choises:
   background: #ffffff;
   z-index: 2;
 }
+@media (max-width: 75em) {
+  .header__wrapp {
+    left: 217px;
+  }
+}
 @media (max-width: 56.25em) {
   .header__wrapp {
     position: absolute;
     height: 20.1rem;
-    width: 130rem;
+    width: 100%;
     left: 154px;
   }
 }
@@ -75,10 +98,19 @@ $breakpoint argument choises:
     border-bottom: 1px solid #e5e5e5;
   }
 }
+@media (max-width: 20em) {
+  .header__wrapp {
+    position: absolute;
+    height: 169px;
+    width: 306px;
+    left: 14px;
+  }
+}
 .header__wrapp-heading {
   padding-left: 6rem;
   font-size: 2.8rem;
   margin-bottom: 30px;
+  margin-top: 40px;
 }
 @media (max-width: 48em) {
   .header__wrapp-heading {
@@ -86,7 +118,17 @@ $breakpoint argument choises:
     width: 296px;
     height: 40px;
     left: 342px;
-    top: 31px;
+    top: 0px;
+  }
+}
+@media (max-width: 20em) {
+  .header__wrapp-heading {
+    font-size: 2.4rem;
+    position: absolute;
+    width: 267px;
+    height: 32px;
+    left: 21px;
+    top: 37px;
   }
 }
 .header__wrapp-input {
@@ -97,6 +139,11 @@ $breakpoint argument choises:
   border-radius: 50px;
   border: none;
 }
+@media (max-width: 56.25em) {
+  .header__wrapp-input {
+    width: 70rem;
+  }
+}
 @media (max-width: 48em) {
   .header__wrapp-input {
     position: absolute;
@@ -104,6 +151,15 @@ $breakpoint argument choises:
     height: 52px;
     left: 62px;
     top: 102px;
+  }
+}
+@media (max-width: 20em) {
+  .header__wrapp-input {
+    position: absolute;
+    width: 259px;
+    height: 52px;
+    left: 37px;
+    top: 98px;
   }
 }
 .header__wrapp-input input {
@@ -117,12 +173,23 @@ $breakpoint argument choises:
 .header__wrapp-input input ::placeholder {
   font-size: 1.8rem;
 }
+@media (max-width: 20em) {
+  .header__wrapp-input input {
+    padding-left: 0;
+    text-align: center;
+  }
+}
 .header__wrapp-input img {
   position: absolute;
   width: 20px;
   height: 20px;
   left: 15px;
   top: calc(50% - 20px / 2);
+}
+@media (max-width: 20em) {
+  .header__wrapp-input img {
+    display: none;
+  }
 }
 
 .hidden {
@@ -137,6 +204,12 @@ $breakpoint argument choises:
   bottom: 27px;
   width: 541px;
   top: 26px;
+}
+@media (max-width: 20em) {
+  .move__top {
+    left: 95px;
+    width: 195px;
+  }
 }
 
 .srink {
@@ -175,6 +248,13 @@ $breakpoint argument choises:
     top: 0px;
   }
 }
+@media (max-width: 20em) {
+  .sidebar__wrapp {
+    position: absolute;
+    width: 6rem;
+    height: 1158px;
+  }
+}
 
 .sidebar__logo {
   position: absolute;
@@ -182,11 +262,34 @@ $breakpoint argument choises:
   height: 5rem;
   left: 41px;
   top: 41px;
+  z-index: 2;
+  background: url("../../assets/icons/sidebar/logo.svg") no-repeat;
 }
 @media (max-width: 56.25em) {
   .sidebar__logo {
-    left: 60px;
+    left: 15px;
+    width: 14.1rem;
+    height: 6.2rem;
   }
+}
+@media (max-width: 48em) {
+  .sidebar__logo {
+    background: url("../../assets/icons/sidebar/mobile/logo.svg") no-repeat;
+    left: 61px;
+    width: 14.1rem;
+  }
+}
+@media (max-width: 20em) {
+  .sidebar__logo {
+    background: url("../../assets/icons/sidebar/mobile/logo.svg") no-repeat;
+    left: 14px;
+    width: 14.1rem;
+    display: none;
+  }
+}
+
+.toggleImg {
+  display: block;
 }
 
 .sidebar__list {
@@ -204,12 +307,17 @@ $breakpoint argument choises:
 }
 @media (max-width: 56.25em) {
   .sidebar__list-item {
-    padding-left: 8rem;
+    padding-left: 2rem;
   }
 }
 @media (max-width: 48em) {
   .sidebar__list-item {
     padding-left: 8rem;
+  }
+}
+@media (max-width: 20em) {
+  .sidebar__list-item {
+    padding-left: 2rem;
   }
 }
 .sidebar__list-item svg {
@@ -223,11 +331,17 @@ $breakpoint argument choises:
   color: #000;
   display: flex;
   align-items: center;
+  font-weight: 600;
 }
 @media (max-width: 56.25em) {
-  .sidebar__list-item-link {
+  .sidebar__list-item-link span {
     font-size: 1.6rem;
     font-weight: 600;
+  }
+}
+@media (max-width: 20em) {
+  .sidebar__list-item svg {
+    display: none;
   }
 }
 
@@ -257,6 +371,11 @@ $breakpoint argument choises:
 }
 @media (max-width: 56.25em) {
   .mobile__menu {
+    display: none;
+  }
+}
+@media (max-width: 48em) {
+  .mobile__menu {
     display: flex;
     z-index: 999;
   }
@@ -282,13 +401,25 @@ $breakpoint argument choises:
 }
 
 .mobile__text--logo {
-  display: none;
+  opacity: 0;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 48em) {
   .mobile__text {
     opacity: 0;
     visibility: hidden;
   }
+  .mobile__text--logo {
+    opacity: 100;
+    visibility: visible;
+  }
+}
+@media (max-width: 48em) and (max-width: 48em) {
+  .mobile__text--logo {
+    top: 15%;
+    left: 31px;
+  }
+}
+@media (max-width: 56.25em) {
   .mobile__text--logo {
     font-size: 1.4rem;
     font-weight: 600;
@@ -296,6 +427,11 @@ $breakpoint argument choises:
     top: 15%;
     margin-left: 5px;
     text-transform: uppercase;
+    display: none;
+  }
+}
+@media (max-width: 56.25em) and (max-width: 48em) {
+  .mobile__text--logo {
     display: inline;
   }
 }
@@ -319,6 +455,17 @@ $breakpoint argument choises:
     justify-content: space-evenly;
   }
 }
+@media (max-width: 20em) {
+  .card__wrapp {
+    margin-top: 27px;
+    padding: 0 0;
+    margin-bottom: 145px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0 2rem;
+  }
+}
 .card__wrapp-card {
   width: 34.7rem;
   height: 161px;
@@ -332,9 +479,22 @@ $breakpoint argument choises:
   overflow: hidden;
   cursor: pointer;
 }
+@media (max-width: 56.25em) {
+  .card__wrapp-card {
+    width: 37.7rem;
+    height: 145px;
+  }
+}
 @media (max-width: 48em) {
   .card__wrapp-card {
     height: 144px;
+  }
+}
+@media (max-width: 20em) {
+  .card__wrapp-card {
+    width: 31.8rem;
+    height: 130px;
+    border-radius: 5px;
   }
 }
 .card__wrapp-card:hover {
@@ -346,7 +506,6 @@ $breakpoint argument choises:
   margin-left: 20px;
   padding-top: 16px;
   font-family: "Roboto", sans-serif;
-  left: 0;
 }
 .card__wrapp-card-left-title {
   font-size: 1.6rem;
@@ -369,9 +528,19 @@ $breakpoint argument choises:
   left: 20px;
   top: 94px;
 }
+@media (max-width: 56.25em) {
+  .card__wrapp-card-left-num {
+    top: 85px;
+  }
+}
 @media (max-width: 48em) {
   .card__wrapp-card-left-num {
     top: 82px;
+  }
+}
+@media (max-width: 20em) {
+  .card__wrapp-card-left-num {
+    top: 72px;
   }
 }
 .card__wrapp-card-left-label {
@@ -387,14 +556,41 @@ $breakpoint argument choises:
     top: 113px;
   }
 }
+@media (max-width: 20em) {
+  .card__wrapp-card-left-label {
+    top: 98px;
+  }
+}
+@media (max-width: 56.25em) {
+  .card__wrapp-card-left-label {
+    top: 117px;
+  }
+}
+@media (max-width: 56.25em) {
+  .card__wrapp-card-right {
+    margin-top: 10px;
+  }
+}
 .card__wrapp-card-right img {
   width: 13rem;
   height: 161px;
+}
+@media (max-width: 56.25em) {
+  .card__wrapp-card-right img {
+    width: 13rem;
+    height: 136px;
+  }
 }
 @media (max-width: 48em) {
   .card__wrapp-card-right img {
     width: 13rem;
     height: 144px;
+  }
+}
+@media (max-width: 20em) {
+  .card__wrapp-card-right img {
+    width: 12.9rem;
+    height: 130px;
   }
 }
 
@@ -430,9 +626,11 @@ $breakpoint argument choises:
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-  /*@include respond(phone){
-      font-size: 50%;// 1rem = 8px ;8/16 = 50%
-    }*/
+}
+@media (max-width: 20em) {
+  html {
+    font-size: 43.75%;
+  }
 }
 @media (max-width: 75em) {
   html {
@@ -467,10 +665,23 @@ body {
   width: 140rem;
   height: 102.4rem;
 }
+@media (max-width: 56.25em) {
+  .container {
+    width: 100%;
+    overflow: hidden;
+  }
+}
 @media (max-width: 48em) {
   .container {
     position: relative;
     width: 768px;
     height: 1024px;
+  }
+}
+@media (max-width: 20em) {
+  .container {
+    position: relative;
+    width: 320px;
+    height: 568px;
   }
 }/*# sourceMappingURL=main.css.map */

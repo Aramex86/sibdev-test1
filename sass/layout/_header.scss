@@ -1,6 +1,6 @@
 .header__wrapp {
   position: absolute;
-  height: 20.1rem;
+  height: 201px;
   width: 120rem;
   left: 240px;
   right: 0px;
@@ -8,10 +8,13 @@
   background: $header-bg;
   z-index: 2;
   // padding: 4rem 0;
+  @include respond(tab-land){
+    left: 217px;
+  }
   @include respond(tab-port) {
     position: absolute;
     height: 20.1rem;
-    width: 130rem;
+    width: 100%;
     left: 154px;
   }
   @include respond(ipad) {
@@ -24,16 +27,31 @@
     text-align: end;
     border-bottom: 1px solid #e5e5e5;
   }
+  @include respond(small-phone) {
+    position: absolute;
+    height: 169px;
+    width: 306px;
+    left: 14px;
+  }
   &-heading {
     padding-left: 6rem;
     font-size: $main-h1;
     margin-bottom: 30px;
+    margin-top: 40px;
     @include respond(ipad) {
       position: absolute;
       width: 296px;
       height: 40px;
       left: 342px;
-      top: 31px;
+      top: 0px;
+    }
+    @include respond(small-phone) {
+      font-size: $main-mob-h1;
+      position: absolute;
+      width: 267px;
+      height: 32px;
+      left: 21px;
+      top: 37px;
     }
   }
   &-input {
@@ -43,12 +61,22 @@
     left: 60px;
     border-radius: 50px;
     border: none;
+    @include respond(tab-port){
+      width: 70rem;
+    }
     @include respond(ipad) {
       position: absolute;
       width: 585px;
       height: 52px;
       left: 62px;
       top: 102px;
+    }
+    @include respond(small-phone) {
+      position: absolute;
+      width: 259px;
+      height: 52px;
+      left: 37px;
+      top: 98px;
     }
     & input {
       border: 1px solid rgba(51, 51, 51, 0.2);
@@ -57,8 +85,13 @@
       border-radius: 50px;
       padding-left: 44px;
       outline: none;
+      
       & ::placeholder {
         font-size: $main-h3;
+      }
+      @include respond(small-phone){
+        padding-left: 0;
+        text-align: center;
       }
     }
     & img {
@@ -67,6 +100,9 @@
       height: 20px;
       left: 15px;
       top: calc(50% - 20px / 2);
+      @include respond(small-phone){
+        display: none;
+      }
     }
   }
 }
@@ -83,7 +119,11 @@
   bottom: 27px;
   width: 541px;
   top: 26px;
+  @include respond(small-phone){
+    left: 95px;
+    width: 195px;
+  }
 }
-.srink{
+.srink {
   height: 106px;
 }

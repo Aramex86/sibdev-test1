@@ -14,6 +14,11 @@ $breakpoint argument choises:
 1em = 16px
 */
 @mixin respond($breakepoit) {
+  @if $breakepoit == small-phone {
+    @media (max-width: 20em) {
+      @content;
+    } //360px
+  }
   @if $breakepoit == phone {
     @media (max-width: 37.5em) {
       @content;
@@ -27,7 +32,7 @@ $breakpoint argument choises:
   @if $breakepoit == ipad {
     @media (max-width: 48em) {
       @content;
-    }
+    }//768
   }
   @if $breakepoit == tab-land {
     @media (max-width: 75em) {

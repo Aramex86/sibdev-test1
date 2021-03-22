@@ -14,6 +14,16 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
+  @include respond(small-phone) {
+    margin-top: 27px;
+    padding: 0 0;
+    // padding-left: 6rem;
+    margin-bottom: 145px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0 2rem;
+  }
   &-card {
     width: 34.7rem;
     height: 161px;
@@ -26,9 +36,18 @@
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
-    @include respond(ipad){
+    @include respond(tab-port) {
+      width: 37.7rem;
+      height: 145px;
+    }
+    @include respond(ipad) {
       // width: 24.6rem;
       height: 144px;
+    }
+    @include respond(small-phone) {
+      width: 31.8rem;
+      height: 130px;
+      border-radius: 5px;
     }
     &:hover {
       background: url("../../assets/img/hover.png");
@@ -39,7 +58,6 @@
       margin-left: 20px;
       padding-top: 16px;
       font-family: "Roboto", sans-serif;
-      left: 0;
       &-title {
         font-size: $card-label;
         font-weight: 700;
@@ -60,8 +78,14 @@
         position: absolute;
         left: 20px;
         top: 94px;
-        @include respond(ipad){
-         top: 82px;
+        @include respond(tab-port){
+          top:85px;
+        }
+        @include respond(ipad) {
+          top: 82px;
+        }
+        @include respond(small-phone) {
+          top: 72px;
         }
       }
       &-label {
@@ -71,18 +95,35 @@
         margin-bottom: 15.7px;
         position: absolute;
         top: 135px;
-        @include respond(ipad){
-          top:113px;
+        @include respond(ipad) {
+          top: 113px;
+        }
+        @include respond(small-phone) {
+          top: 98px;
+        }
+        @include respond(tab-port){
+          top:117px;
         }
       }
     }
     &-right {
+      @include respond(tab-port){
+        margin-top: 10px;
+      }
       & img {
         width: 13rem;
         height: 161px;
-        @include respond(ipad){
+        @include respond(tab-port){
+          width: 13rem;
+    height: 136px;
+        }
+        @include respond(ipad) {
           width: 13rem;
           height: 144px;
+        }
+        @include respond(small-phone) {
+          width: 12.9rem;
+          height: 130px;
         }
       }
     }
