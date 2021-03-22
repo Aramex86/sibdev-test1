@@ -1,4 +1,3 @@
-
 @import "./mixins/variables";
 @import "./mixins/mediaManager";
 
@@ -7,12 +6,6 @@
 @import "./layout/sidebar";
 
 @import "./common/bodycard";
-
-
-
-
-
-
 
 *,
 *::after,
@@ -25,37 +18,41 @@ html {
   font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
   box-sizing: border-box;
 
-    /*@include respond(phone){
+  /*@include respond(phone){
       font-size: 50%;// 1rem = 8px ;8/16 = 50%
     }*/
 
-    @include respond(tab-land){//width < 1200 ?
-      font-size: 56.25%;// 1rem = 9px ;9/16 = 56.25%
-    }
-    @include respond(tab-port){//width < 900 ?
-      font-size: 50%; // 1rem = 8px ;8/16 = 50%
-    }
-    @include respond(ipad){//width < 768
-      font-size: 48%; 
-    }
-    @include respond(big-desktop){
-      font-size: 75%;// 1rem = 12px ;12/16 = 75%
-    }
+  @include respond(tab-land) {
+    //width < 1200 ?
+    font-size: 56.25%; // 1rem = 9px ;9/16 = 56.25%
+  }
+  @include respond(tab-port) {
+    //width < 900 ?
+    font-size: 50%; // 1rem = 8px ;8/16 = 50%
+  }
+  @include respond(ipad) {
+    //width < 768
+    font-size: 48%;
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px ;12/16 = 75%
+  }
 }
 
-
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: $main-bg;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $main-bg;
 }
 
 .container {
   position: relative;
   width: 140rem;
   height: 102.4rem;
-  @include respond(tab-port){
-    width: 100%;
+  @include respond(ipad) {
+    position: relative;
+    width: 768px;
+    height: 1024px;
   }
 }

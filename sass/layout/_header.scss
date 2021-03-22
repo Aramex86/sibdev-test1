@@ -6,22 +6,33 @@
   right: 0px;
   top: 0px;
   background: $header-bg;
+  z-index: 2;
   // padding: 4rem 0;
-  @include respond(tab-port){
-    width: 65.5rem;
-    left: 192px;
+  @include respond(tab-port) {
+    position: absolute;
+    height: 20.1rem;
+    width: 130rem;
+    left: 154px;
+  }
+  @include respond(ipad) {
+    position: absolute;
     height: 181px;
-    border-bottom:1px solid #e5e5e5;
+    left: 104px;
+    right: 0px;
+    top: 0px;
+    width: 664px;
+    text-align: end;
+    border-bottom: 1px solid #e5e5e5;
   }
   &-heading {
     padding-left: 6rem;
     font-size: $main-h1;
     margin-bottom: 30px;
-    @include respond(tab-port){
+    @include respond(ipad) {
       position: absolute;
-      width: 29.6rem;
+      width: 296px;
       height: 40px;
-      left: 315px;
+      left: 342px;
       top: 31px;
     }
   }
@@ -32,10 +43,12 @@
     left: 60px;
     border-radius: 50px;
     border: none;
-    @include respond(tab-port){
-      width: 61.2rem;
-      left: 17px;
-      top:102px;
+    @include respond(ipad) {
+      position: absolute;
+      width: 585px;
+      height: 52px;
+      left: 62px;
+      top: 102px;
     }
     & input {
       border: 1px solid rgba(51, 51, 51, 0.2);
@@ -56,4 +69,21 @@
       top: calc(50% - 20px / 2);
     }
   }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.move__top {
+  position: absolute;
+  height: 52px;
+  left: 111px;
+  right: 26px;
+  bottom: 27px;
+  width: 541px;
+  top: 26px;
+}
+.srink{
+  height: 106px;
 }

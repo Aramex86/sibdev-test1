@@ -20,10 +20,13 @@ $breakpoint argument choises:
   top: 201px;
   overflow-y: scroll;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 48em) {
   .body__wrapp {
-    width: 66.4rem;
-    height: 843px;
+    position: absolute;
+    width: 664px;
+    height: 918px;
+    left: 104px;
+    top: 181px;
   }
 }
 
@@ -38,6 +41,10 @@ $breakpoint argument choises:
   /* Firefox */
 }
 
+.mtop {
+  top: 99px;
+}
+
 .header__wrapp {
   position: absolute;
   height: 20.1rem;
@@ -46,12 +53,25 @@ $breakpoint argument choises:
   right: 0px;
   top: 0px;
   background: #ffffff;
+  z-index: 2;
 }
 @media (max-width: 56.25em) {
   .header__wrapp {
-    width: 65.5rem;
-    left: 192px;
+    position: absolute;
+    height: 20.1rem;
+    width: 130rem;
+    left: 154px;
+  }
+}
+@media (max-width: 48em) {
+  .header__wrapp {
+    position: absolute;
     height: 181px;
+    left: 104px;
+    right: 0px;
+    top: 0px;
+    width: 664px;
+    text-align: end;
     border-bottom: 1px solid #e5e5e5;
   }
 }
@@ -60,12 +80,12 @@ $breakpoint argument choises:
   font-size: 2.8rem;
   margin-bottom: 30px;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 48em) {
   .header__wrapp-heading {
     position: absolute;
-    width: 29.6rem;
+    width: 296px;
     height: 40px;
-    left: 315px;
+    left: 342px;
     top: 31px;
   }
 }
@@ -77,10 +97,12 @@ $breakpoint argument choises:
   border-radius: 50px;
   border: none;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 48em) {
   .header__wrapp-input {
-    width: 61.2rem;
-    left: 17px;
+    position: absolute;
+    width: 585px;
+    height: 52px;
+    left: 62px;
     top: 102px;
   }
 }
@@ -103,6 +125,24 @@ $breakpoint argument choises:
   top: calc(50% - 20px / 2);
 }
 
+.hidden {
+  opacity: 0;
+}
+
+.move__top {
+  position: absolute;
+  height: 52px;
+  left: 111px;
+  right: 26px;
+  bottom: 27px;
+  width: 541px;
+  top: 26px;
+}
+
+.srink {
+  height: 106px;
+}
+
 .sidebar__wrapp {
   position: absolute;
   width: 24rem;
@@ -110,13 +150,43 @@ $breakpoint argument choises:
   top: 0px;
   bottom: -21px;
   background: #f3f4f9;
+  z-index: 3;
 }
+@media (max-width: 56.25em) {
+  .sidebar__wrapp--mobile {
+    width: 10.4rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .sidebar__wrapp {
+    position: absolute;
+    width: 155px;
+    height: 1272px;
+    left: 0px;
+    top: 0px;
+  }
+}
+@media (max-width: 48em) {
+  .sidebar__wrapp {
+    position: absolute;
+    width: 155px;
+    height: 1272px;
+    left: 0px;
+    top: 0px;
+  }
+}
+
 .sidebar__logo {
   position: absolute;
   width: 12.1rem;
   height: 5rem;
   left: 41px;
   top: 41px;
+}
+@media (max-width: 56.25em) {
+  .sidebar__logo {
+    left: 60px;
+  }
 }
 
 .sidebar__list {
@@ -131,6 +201,16 @@ $breakpoint argument choises:
   padding-left: 4rem;
   cursor: pointer;
   align-items: center;
+}
+@media (max-width: 56.25em) {
+  .sidebar__list-item {
+    padding-left: 8rem;
+  }
+}
+@media (max-width: 48em) {
+  .sidebar__list-item {
+    padding-left: 8rem;
+  }
 }
 .sidebar__list-item svg {
   width: 24px;
@@ -173,6 +253,13 @@ $breakpoint argument choises:
   width: 48px;
   height: 106px;
   left: 100%;
+  display: none;
+}
+@media (max-width: 56.25em) {
+  .mobile__menu {
+    display: flex;
+    z-index: 999;
+  }
 }
 .mobile__menu-btn {
   position: absolute;
@@ -186,6 +273,33 @@ $breakpoint argument choises:
   outline: none;
 }
 
+.sidebar__open {
+  width: 24.6rem;
+}
+
+.close {
+  background-image: url("../../assets/icons/sidebar/menu/menu exit.png");
+}
+
+.mobile__text--logo {
+  display: none;
+}
+@media (max-width: 56.25em) {
+  .mobile__text {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .mobile__text--logo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    position: absolute;
+    top: 15%;
+    margin-left: 5px;
+    text-transform: uppercase;
+    display: inline;
+  }
+}
+
 .card__wrapp {
   margin-top: 40px;
   padding: 0 6rem;
@@ -193,6 +307,17 @@ $breakpoint argument choises:
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+@media (max-width: 48em) {
+  .card__wrapp {
+    margin-top: 27px;
+    padding: 0 0;
+    padding-left: 6rem;
+    margin-bottom: 145px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 .card__wrapp-card {
   width: 34.7rem;
@@ -207,15 +332,14 @@ $breakpoint argument choises:
   overflow: hidden;
   cursor: pointer;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 48em) {
   .card__wrapp-card {
-    width: 29.6rem;
     height: 144px;
   }
 }
 .card__wrapp-card:hover {
   background: url("../../assets/img/hover.png");
-  background-size: cover;
+  background-size: 100% 100%;
   background-color: #fff;
 }
 .card__wrapp-card-left {
@@ -245,6 +369,11 @@ $breakpoint argument choises:
   left: 20px;
   top: 94px;
 }
+@media (max-width: 48em) {
+  .card__wrapp-card-left-num {
+    top: 82px;
+  }
+}
 .card__wrapp-card-left-label {
   font-size: 1.6rem;
   opacity: 0.5;
@@ -253,9 +382,20 @@ $breakpoint argument choises:
   position: absolute;
   top: 135px;
 }
+@media (max-width: 48em) {
+  .card__wrapp-card-left-label {
+    top: 113px;
+  }
+}
 .card__wrapp-card-right img {
   width: 13rem;
   height: 161px;
+}
+@media (max-width: 48em) {
+  .card__wrapp-card-right img {
+    width: 13rem;
+    height: 144px;
+  }
 }
 
 .poligon_left {
@@ -265,7 +405,7 @@ $breakpoint argument choises:
   height: 10px;
   clip-path: polygon(72% 50%, 8% 0, 6% 112%);
   top: 47%;
-  left: 0%;
+  left: -1px;
 }
 
 .poligon_right {
@@ -291,8 +431,8 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   /*@include respond(phone){
-    font-size: 50%;// 1rem = 8px ;8/16 = 50%
-  }*/
+      font-size: 50%;// 1rem = 8px ;8/16 = 50%
+    }*/
 }
 @media (max-width: 75em) {
   html {
@@ -327,8 +467,10 @@ body {
   width: 140rem;
   height: 102.4rem;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 48em) {
   .container {
-    width: 100%;
+    position: relative;
+    width: 768px;
+    height: 1024px;
   }
 }/*# sourceMappingURL=main.css.map */

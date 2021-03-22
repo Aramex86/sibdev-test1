@@ -5,10 +5,25 @@
   top: 0px;
   bottom: -21px;
   background: $sidebar-bg;
+  z-index: 3;
   @include respond(tab-port) {
     &--mobile {
-      // width: 10.4rem;
+      width: 10.4rem;
     }
+  }
+  @include respond(tab-port) {
+    position: absolute;
+    width: 155px;
+    height: 1272px;
+    left: 0px;
+    top: 0px;
+  }
+  @include respond(ipad) {
+    position: absolute;
+    width: 155px;
+    height: 1272px;
+    left: 0px;
+    top: 0px;
   }
 }
 
@@ -18,6 +33,10 @@
   height: 5rem;
   left: 41px;
   top: 41px;
+  @include respond(tab-port) {
+    left: 60px;
+  }
+  
 }
 
 .sidebar__list {
@@ -31,6 +50,12 @@
     padding-left: 4rem;
     cursor: pointer;
     align-items: center;
+    @include respond(tab-port) {
+      padding-left: 8rem;
+    }
+    @include respond(ipad) {
+      padding-left: 8rem;
+    }
     & svg {
       width: 24px;
       height: 24px;
@@ -76,16 +101,49 @@
   background: url("../../assets/icons/sidebar/menu/Union.png");
   width: 48px;
   height: 106px;
-  left:100%;
-  &-btn{
+  left: 100%;
+  display: none;
+  @include respond(tab-port) {
+    display: flex;
+    z-index: 999;
+  }
+  &-btn {
     position: absolute;
     width: 26px;
     height: 20px;
     right: 20px;
     top: 43px;
-    background-image: url('../../assets/icons/sidebar/menu/burger\ menu.png');
+    background-image: url("../../assets/icons/sidebar/menu/burger\ menu.png");
     background-color: transparent;
     border: none;
     outline: none;
+  }
+}
+
+.sidebar__open {
+  width: 24.6rem;
+}
+
+.close {
+  background-image: url("../../assets/icons/sidebar/menu/menu\ exit.png");
+}
+
+.mobile__text {
+  &--logo {
+    display: none;
+  }
+
+  @include respond(tab-port) {
+    opacity: 0;
+    visibility: hidden;
+    &--logo {
+      font-size: $main-mob-h3;
+      font-weight: 600;
+      position: absolute;
+      top: 15%;
+      margin-left: 5px;
+      text-transform: uppercase;
+      display: inline;
+    }
   }
 }

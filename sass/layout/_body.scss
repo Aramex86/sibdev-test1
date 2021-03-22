@@ -5,17 +5,23 @@
   left: 240px;
   top: 201px;
   overflow-y: scroll;
-  @include respond(tab-port){
-    width: 66.4rem;
-    height: 843px;
-  
+  @include respond(ipad) {
+    position: absolute;
+    width: 664px;
+    height: 918px;
+    left: 104px;
+    top: 181px;
   }
 }
 
 .body__wrapp::-webkit-scrollbar {
   display: none;
 }
-.body__wrapp{
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+.body__wrapp {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.mtop{
+  top:99px;
 }
